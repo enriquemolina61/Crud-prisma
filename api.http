@@ -3,10 +3,10 @@ POST http://localhost:3000/bicycle
 Content-Type: application/json
 
 {
-  "color":"Orange",
+  "color":"",
   "gears": 10,
-  "brand": "Sundown",
-  "model":"Road",
-  "price": 25000
+  "brand": "a",
+  "model":"ss",
+  "price": 2500
 }
 

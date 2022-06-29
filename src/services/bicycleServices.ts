@@ -1,3 +1,4 @@
+import { response } from "express";
 import { prisma } from "../database/prismaclient";
 
 interface ICreateBicycle {
@@ -7,8 +8,13 @@ interface ICreateBicycle {
   model: string;
   price: number;
 }
+const result = response.json({message:"Preencha todos os campos!"});
+
 export class CreateBicycle {
   async execute({ color, gears, brand, model, price }: ICreateBicycle) {
+    if (!color || !gears || !brand || !model || !price) {
+      return result;
+    }
     const bicycle = await prisma.bicycle.create({
       data: {
         color,
@@ -18,6 +24,7 @@ export class CreateBicycle {
         price,
       },
     });
+
     return bicycle;
   }
 }

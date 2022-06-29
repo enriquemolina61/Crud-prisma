@@ -8,12 +8,12 @@ datasource db {
 }
 
 model Bicycle {
-  id    String @id @default(uuid())
-  color String
-  gears Int
-  brand String
-  model String
-  price Float
+  id         String   @id @default(uuid())
+  color      String
+  gears      Int
+  brand      String
+  model      String
+  price      Float
   created_at DateTime @default(now())
   uptated_at DateTime @default(now())
 }
