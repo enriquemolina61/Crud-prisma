@@ -1,0 +1,12 @@
+### Create bicycle
+POST http://localhost:3000/bicycle
+Content-Type: application/json
+
+{
+  "color":"Orange",
+  "gears": 10,
+  "brand": "Sundown",
+  "model":"Road",
+  "price": 25000
+}
+
