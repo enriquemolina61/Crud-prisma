@@ -9,8 +9,8 @@ interface ICreateBicycle {
   price: number;
 }
 
-export class CreateBicycle {
-  async execute({ color, gears, brand, model, price }: ICreateBicycle) {
+export class BicycleService {
+  async createBicycle({ color, gears, brand, model, price }: ICreateBicycle) {
     const bicycle = await prisma.bicycle.create({
       data: {
         color,
@@ -22,5 +22,13 @@ export class CreateBicycle {
     });
 
     return bicycle;
+  }
+  async findallBicycle() {
+    const bicycles = await prisma.bicycle.findMany({
+      where: {
+        color: ""
+      },
+    });
+    return bicycles;
   }
 }

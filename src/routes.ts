@@ -2,8 +2,9 @@ import { Router } from "express";
 import { BicycleController } from "./controllers/bicycleController";
 
 const routes = Router();
-const createBicycle = new BicycleController();
+const bicycle = new BicycleController();
 
-routes.post("/bicycle/", createBicycle.createBicycle);
+routes.post("/bicycle/", bicycle.createBicycle);
+routes.get("/bicycles/", bicycle.findAllBicycle);
 
 export { routes };

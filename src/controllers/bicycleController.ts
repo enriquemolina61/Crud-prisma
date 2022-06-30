@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CreateBicycle } from "../services/bicycleServices";
+import { BicycleService } from "../services/bicycleServices";
 
 export class BicycleController {
   async createBicycle(request: Request, response: Response) {
@@ -12,8 +12,8 @@ export class BicycleController {
         return response.json(resposta);
       }
 
-      const createBicycle = new CreateBicycle();
-      const result = await createBicycle.execute({
+      const bicycle = new BicycleService();
+      const result = await bicycle.createBicycle({
         color,
         gears,
         brand,
@@ -24,5 +24,12 @@ export class BicycleController {
     } catch (error) {
       response.status(404).send(Error!);
     }
+  }
+  async findAllBicycle(request: Request, response: Response) {
+    try {
+      const bicycles = new BicycleService();
+      const result = await bicycles.findallBicycle();
+      return result;
+    } catch (error) {}
   }
 }

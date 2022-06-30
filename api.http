@@ -10,3 +10,6 @@ Content-Type: application/json
   "price": 55
 }
 
+###
+GET http://localhost:3000/bicycles
+
