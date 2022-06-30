@@ -4,6 +4,6 @@ import { BicycleController } from "./controllers/bicycleController";
 const routes = Router();
 const createBicycle = new BicycleController();
 
-routes.post("/bicycle/", createBicycle.handle);
+routes.post("/bicycle/", createBicycle.createBicycle);
 
 export { routes };

@@ -4,8 +4,8 @@ Content-Type: application/json
 
 {
   "color":"testando validacao",
-  "gears": 10,
-  "brand": "",
+  "gears": 20,
+  "brand": "asd",
   "model":"dasd",
   "price": 55
 }
