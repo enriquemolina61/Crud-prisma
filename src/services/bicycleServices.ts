@@ -36,6 +36,7 @@ export class BicycleService {
         color: color,
       },
     });
+    
     return bicycle;
   }
   async findByPrice(price: number) {

@@ -3,7 +3,7 @@ POST http://localhost:3000/bicycle
 Content-Type: application/json
 
 {
-  "color":"",
+  "color":"dd",
   "gears": 10,
   "brand": "ddf",
   "model":"da",
@@ -14,7 +14,7 @@ Content-Type: application/json
 GET http://localhost:3000/bicycles
 
 ###
-GET http://localhost:3000/bicycles/color/azul
+GET http://localhost:3000/bicycles/color/d
 
 ###
 GET http://localhost:3000/bicycles/price/30000
