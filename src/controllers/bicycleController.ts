@@ -32,7 +32,9 @@ export class BicycleController {
       const bicycles = new BicycleService();
       const result = await bicycles.findAllBicycles();
       return response.json(result);
-    } catch (error) {}
+    } catch (error) {
+      response.status(404).send(Error!);
+    }
   }
 
   async findByColor(request: Request, response: Response) {
@@ -41,10 +43,32 @@ export class BicycleController {
       const color = request.params.color;
       const result = new BicycleService();
       const bicycle = await result.findByColor(color);
-      
+
       return response.json(bicycle);
     } catch (error) {
-      response.status(404);
+      response.status(404).send(Error!);
+    }
+  }
+  async findByPrice(request: Request, response: Response) {
+    try {
+      const price = +request.params.price;
+      const result = new BicycleService();
+      const bicycle = await result.findByPrice(price);
+
+      return response.json(bicycle);
+    } catch (error) {
+      response.status(404).send(Error!);
+    }
+  }
+  async updatedPrice(request: Request, response: Response) {
+    try {
+      const { price } = request.body;
+      const { id } = request.params;
+      const result = new BicycleService();
+      const bicycle = await result.updatedPrice(id, price);
+      return response.json(bicycle);
+    } catch (error) {
+      response.status(404).send(Error!);
     }
   }
 }

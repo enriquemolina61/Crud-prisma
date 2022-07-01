@@ -5,14 +5,24 @@ Content-Type: application/json
 {
   "color":"vermelho",
   "gears": 20,
-  "brand": "asd",
+  "brand": "",
   "model":"dasd",
-  "price": 55
+  "price": 55500
 }
 
 ###
 GET http://localhost:3000/bicycles
 
 ###
-GET http://localhost:3000/bicycles/color/testando validacao
+GET http://localhost:3000/bicycles/color/azul
 
+###
+GET http://localhost:3000/bicycles/price/30000
+
+###
+PUT  http://localhost:3000/bicycles/update/cf48dc61-7e9e-4903-8f08-1085c6d563c4
+Content-Type: application/json
+
+{ 
+  "price": 300000
+}
