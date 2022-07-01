@@ -20,9 +20,10 @@ GET http://localhost:3000/bicycles/color/azul
 GET http://localhost:3000/bicycles/price/30000
 
 ###
-PUT  http://localhost:3000/bicycles/update/cf48dc61-7e9e-4903-8f08-1085c6d563c4
+PUT  http://localhost:3000/bicycles/update/
 Content-Type: application/json
 
 { 
-  "price": 300000
+  "id":"904f5c02-b81e-4c60-95a1-abf435cde24e",
+  "price": 5400
 }

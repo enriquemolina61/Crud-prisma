@@ -8,6 +8,6 @@ routes.post("/bicycle/", bicycle.createBicycle);
 routes.get("/bicycles/", bicycle.findAllBicycles);
 routes.get("/bicycles/color/:color", bicycle.findByColor);
 routes.get("/bicycles/price/:price", bicycle.findByPrice);
-routes.put("/bicycles/update/:id", bicycle.updatedPrice);
+routes.put("/bicycles/update/", bicycle.updatedPrice);
 export { routes };
 

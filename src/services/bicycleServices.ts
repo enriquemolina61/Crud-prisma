@@ -57,4 +57,5 @@ export class BicycleService {
     });
     return bicycle;
   }
+
 }

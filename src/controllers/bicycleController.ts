@@ -62,8 +62,8 @@ export class BicycleController {
   }
   async updatedPrice(request: Request, response: Response) {
     try {
-      const { price } = request.body;
-      const { id } = request.params;
+      const { price, id } = request.body;
+      // const { id } = request.params;
       const result = new BicycleService();
       const bicycle = await result.updatedPrice(id, price);
       return response.json(bicycle);
