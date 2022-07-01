@@ -63,9 +63,20 @@ export class BicycleController {
   async updatedPrice(request: Request, response: Response) {
     try {
       const { price, id } = request.body;
-      // const { id } = request.params;
       const result = new BicycleService();
       const bicycle = await result.updatedPrice(id, price);
+      return response.json(bicycle);
+    } catch (error) {
+      response.status(404).send(Error!);
+    }
+  }
+  async sellBicycle(request: Request, response: Response) {
+    try {
+      const { id } = request.body;
+      // const { id } = request.params;
+      // const sold = true;
+      const result = new BicycleService();
+      const bicycle = await result.sellBicycle(id);
       return response.json(bicycle);
     } catch (error) {
       response.status(404).send(Error!);

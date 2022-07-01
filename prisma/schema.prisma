@@ -16,6 +16,7 @@ model Bicycle {
   price      Float
   created_at DateTime @default(now())
   uptated_at DateTime @default(now())
+  sold       Boolean @default(false)
 
   @@map("bicycle")
 }

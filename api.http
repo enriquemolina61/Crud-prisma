@@ -3,11 +3,11 @@ POST http://localhost:3000/bicycle
 Content-Type: application/json
 
 {
-  "color":"vermelho",
-  "gears": 20,
-  "brand": "",
-  "model":"dasd",
-  "price": 55500
+  "color":"branca",
+  "gears": 10,
+  "brand": "ddf",
+  "model":"da",
+  "price": 500
 }
 
 ###
@@ -26,4 +26,12 @@ Content-Type: application/json
 { 
   "id":"904f5c02-b81e-4c60-95a1-abf435cde24e",
   "price": 5400
+}
+
+###
+PUT  http://localhost:3000/bicycles/sell/
+Content-Type: application/json
+
+{ 
+  "id":"071daf0d-66ff-4892-af4e-cd3423547bed"
 }

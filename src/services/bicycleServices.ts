@@ -57,5 +57,15 @@ export class BicycleService {
     });
     return bicycle;
   }
-
+  async sellBicycle(id: string) {
+    const bicycle = await prisma.bicycle.update({
+      where: {
+        id: id,
+      },
+      data: {
+        sold: true,
+      },
+    });
+    return bicycle;
+  }
 }
