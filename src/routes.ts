@@ -6,5 +6,6 @@ const bicycle = new BicycleController();
 
 routes.post("/bicycle/", bicycle.createBicycle);
 routes.get("/bicycles/", bicycle.findAllBicycles);
+routes.get("/bicycles/color/:color", bicycle.findByColor);
 
 export { routes };

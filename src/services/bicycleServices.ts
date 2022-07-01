@@ -1,5 +1,5 @@
-import { response } from "express";
 import { prisma } from "../database/prismaclient";
+import { Request, response, Response } from "express";
 
 interface ICreateBicycle {
   color: string;
@@ -8,7 +8,9 @@ interface ICreateBicycle {
   model: string;
   price: number;
 }
-
+interface IFindByColor {
+  color: string;
+}
 export class BicycleService {
   async createBicycle({ color, gears, brand, model, price }: ICreateBicycle) {
     const bicycle = await prisma.bicycle.create({
@@ -26,5 +28,14 @@ export class BicycleService {
   async findAllBicycles() {
     const bicycles = await prisma.bicycle.findMany();
     return bicycles;
+  }
+
+  async findByColor(color: string) {
+    const bicycle = await prisma.bicycle.findMany({
+      where: {
+        color: color,
+      },
+    });    
+    return bicycle;
   }
 }
