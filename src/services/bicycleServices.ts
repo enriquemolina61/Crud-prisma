@@ -20,7 +20,9 @@ export class BicycleService {
         price,
       },
     });
-
+    if (!color || !gears || !brand || !model || !price) {
+      return { message: "Favor preencher todos os campos!" };
+    }
     return bicycle;
   }
   async findAllBicycles() {

@@ -3,7 +3,7 @@ POST http://localhost:3000/bicycle
 Content-Type: application/json
 
 {
-  "color":"branca",
+  "color":"",
   "gears": 10,
   "brand": "ddf",
   "model":"da",
@@ -33,5 +33,5 @@ PUT  http://localhost:3000/bicycles/sell/
 Content-Type: application/json
 
 { 
-  "id":"071daf0d-66ff-4892-af4e-cd3423547bed"
+  "id":"2ec8b030-2cf0-41e3-b5d2-733d862a66e8"
 }
