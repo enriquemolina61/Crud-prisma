@@ -17,15 +17,15 @@ GET http://localhost:3000/bicycles
 GET http://localhost:3000/bicycles/color/d
 
 ###
-GET http://localhost:3000/bicycles/price/30000
+GET http://localhost:3000/bicycles/price/44
 
 ###
 PUT  http://localhost:3000/bicycles/update/
 Content-Type: application/json
 
 { 
-  "id":"904f5c02-b81e-4c60-95a1-abf435cde24e",
-  "price": 5400
+  "id":"b80df9e3-93f9-40c8-b59d-5b30409fb40a",
+  "price": 5000
 }
 
 ###
