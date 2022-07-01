@@ -23,12 +23,8 @@ export class BicycleService {
 
     return bicycle;
   }
-  async findallBicycle() {
-    const bicycles = await prisma.bicycle.findMany({
-      where: {
-        color: ""
-      },
-    });
+  async findAllBicycles() {
+    const bicycles = await prisma.bicycle.findMany();
     return bicycles;
   }
 }

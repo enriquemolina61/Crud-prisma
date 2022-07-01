@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { BicycleService } from "../services/bicycleServices";
+import { prisma } from "../database/prismaclient";
 
 export class BicycleController {
   async createBicycle(request: Request, response: Response) {
@@ -25,11 +26,12 @@ export class BicycleController {
       response.status(404).send(Error!);
     }
   }
-  async findAllBicycle(request: Request, response: Response) {
+ 
+  async findAllBicycles(request: Request, response: Response) {
     try {
       const bicycles = new BicycleService();
-      const result = await bicycles.findallBicycle();
-      return result;
+      const result = await bicycles.findAllBicycles();
+      return response.json(result);
     } catch (error) {}
   }
 }
