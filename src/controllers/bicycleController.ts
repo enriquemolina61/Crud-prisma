@@ -75,10 +75,10 @@ export class BicycleController {
       response.status(404).send(Error!);
     }
   }
-  async soldsBicycle(request: Request, response: Response) {
+  async soldBicycle(request: Request, response: Response) {
     try {
       const bicycles = new BicycleService();
-      const result = await bicycles.soldsBicycle();
+      const result = await bicycles.soldBicycle();
       return response.json(result);
     } catch (error) {
       response.status(404).send(Error!);

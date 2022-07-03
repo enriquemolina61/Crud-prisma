@@ -78,7 +78,7 @@ export class BicycleService {
     return bicycle;
   }
 
-  async soldsBicycle() {
+  async soldBicycle() {
     const bicycle = await prisma.bicycle.findMany({
       where: {
         sold: true,
