@@ -17,7 +17,7 @@ GET http://localhost:3000/bicycles
 GET http://localhost:3000/bicycles/color/dd
 
 ### Rota para filtrar as bicicletas até o preço desejado  
-GET http://localhost:3000/bicycles/price/4400
+GET http://localhost:3000/bicycles/price/44
 
 ### Rota para alterar o preço de uma bicicleta
 PUT  http://localhost:3000/bicycles/update/

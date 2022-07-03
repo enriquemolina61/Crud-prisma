@@ -52,7 +52,11 @@ export class BicycleService {
         },
       },
     });
-
+    if (bicycle === []) {
+      return {
+        message: "Não é possivel alterar o preço de uma bicicleta vendida!",
+      };
+    }
     return bicycle;
   }
   async updatedPrice(id: string, price: number) {
@@ -64,8 +68,10 @@ export class BicycleService {
         price: price,
       },
     });
-    if(bicycle.sold == true){
-      return {message:"Não é possivel alterar o preço de uma bicicleta vendida!"}
+    if (bicycle.sold == true) {
+      return {
+        message: "Não é possivel alterar o preço de uma bicicleta vendida!",
+      };
     }
     return bicycle;
   }
