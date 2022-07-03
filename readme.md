@@ -4,7 +4,7 @@
 
 <h1 align="center">Molina Bicycles</h1>
 
-<p align="center">Esse projeto consiste na criação de um CRUD para um estabelecimento de vendas de bicicletas. Onde foi pedido rotas para cadastro de bicicletas, vendas de bicicletas, alteração de preço das bicicletas cadastradas, filtragem por cor ou preço. Foi utilizado no projeto a linguagem Typescript, com Express, Sequelize como ORM. </p>
+<p align="center">Esse projeto consiste na criação de um CRUD para um estabelecimento de vendas de bicicletas. Onde foi pedido rotas para cadastro de bicicletas, vendas de bicicletas, alteração de preço das bicicletas cadastradas, filtragem por cor ou preço. Foi utilizado no projeto a linguagem Typescript, com Express e Prisma ORM. </p>
 
 <h4 align="center"> 
 	🚧  TypeScript CRUD 🚀 Em construção...  🚧
