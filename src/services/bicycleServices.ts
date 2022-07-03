@@ -48,6 +48,9 @@ export class BicycleService {
         price: {
           lte: price,
         },
+        NOT: {
+          sold: true,
+        },
       },
     });
     if (bicycle === []) {
