@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/enriquemolina61/Desafio-CRUD/blob/master/Molina.png?raw=true" width="250" title="hover text">
+  <img src="https://github.com/enriquemolina61/Crud-prisma/blob/master/bicycle.png?raw=true" width="250" title="hover text">
 </p>
 
 <h1 align="center">Molina Bicycles</h1>
