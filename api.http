@@ -10,7 +10,7 @@ Content-Type: application/json
   "price": 500
 }
 
-###  Rota para listar todas as bicicletas, vendidas ou não
+###  Rota para listar todas as bicicletas que ainda nao foram vendidas
 GET http://localhost:3000/bicycles
 
 ### Rota para filtrar por cor
@@ -36,3 +36,5 @@ Content-Type: application/json
   "id":"2ec8b030-2cf0-41e3-b5d2-733d862a66e8"
 }
 
+### Rota para listar todas as bicicletas vendidas
+GET http://localhost:3000/bicycles/sold/

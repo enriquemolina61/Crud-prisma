@@ -32,7 +32,6 @@ export class BicycleController {
   }
 
   async findByColor(request: Request, response: Response) {
-    const resposta = { message: "Nao existe bicicleta dessa cor!" };
     try {
       const color = request.params.color;
       const result = new BicycleService();
@@ -72,6 +71,15 @@ export class BicycleController {
       const result = new BicycleService();
       const bicycle = await result.sellBicycle(id);
       return response.json(bicycle);
+    } catch (error) {
+      response.status(404).send(Error!);
+    }
+  }
+  async soldsBicycle(request: Request, response: Response) {
+    try {
+      const bicycles = new BicycleService();
+      const result = await bicycles.soldsBicycle();
+      return response.json(result);
     } catch (error) {
       response.status(404).send(Error!);
     }

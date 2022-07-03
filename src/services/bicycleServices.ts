@@ -1,5 +1,6 @@
 import { prisma } from "../database/prismaclient";
 import { Request, response, Response } from "express";
+import { PrismaClientUnknownRequestError } from "@prisma/client/runtime";
 
 interface ICreateBicycle {
   color: string;
@@ -26,7 +27,11 @@ export class BicycleService {
     return bicycle;
   }
   async findAllBicycles() {
-    const bicycles = await prisma.bicycle.findMany();
+    const bicycles = await prisma.bicycle.findMany({
+      where: {
+        sold: false,
+      },
+    });
     return bicycles;
   }
 
@@ -67,6 +72,15 @@ export class BicycleService {
         id: id,
       },
       data: {
+        sold: true,
+      },
+    });
+    return bicycle;
+  }
+
+  async soldsBicycle() {
+    const bicycle = await prisma.bicycle.findMany({
+      where: {
         sold: true,
       },
     });
