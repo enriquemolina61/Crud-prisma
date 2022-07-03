@@ -24,7 +24,7 @@ PUT  http://localhost:3000/bicycles/update/
 Content-Type: application/json
 
 { 
-  "id":"ebb4a1a9-8959-4a0d-b24f-3495a996ca89",
+  "id":"499ea9a4-a39f-43e1-839a-1849c9af8837",
   "price": 500
 }
 

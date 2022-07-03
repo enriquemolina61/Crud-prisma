@@ -64,6 +64,9 @@ export class BicycleService {
         price: price,
       },
     });
+    if(bicycle.sold == true){
+      return {message:"Não é possivel alterar o preço de uma bicicleta vendida!"}
+    }
     return bicycle;
   }
   async sellBicycle(id: string) {
