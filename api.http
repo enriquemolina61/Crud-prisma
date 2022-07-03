@@ -1,4 +1,4 @@
-### Create bicycle
+### Rota para cadastrar a bicicleta
 POST http://localhost:3000/bicycle
 Content-Type: application/json
 
@@ -10,28 +10,29 @@ Content-Type: application/json
   "price": 500
 }
 
-###
+###  Rota para listar todas as bicicletas, vendidas ou não
 GET http://localhost:3000/bicycles
 
-###
-GET http://localhost:3000/bicycles/color/d
+### Rota para filtrar por cor
+GET http://localhost:3000/bicycles/color/dd
 
-###
-GET http://localhost:3000/bicycles/price/44
+### Rota para filtrar as bicicletas até o preço desejado  
+GET http://localhost:3000/bicycles/price/4400
 
-###
+### Rota para alterar o preço de uma bicicleta
 PUT  http://localhost:3000/bicycles/update/
 Content-Type: application/json
 
 { 
-  "id":"b80df9e3-93f9-40c8-b59d-5b30409fb40a",
-  "price": 5000
+  "id":"ebb4a1a9-8959-4a0d-b24f-3495a996ca89",
+  "price": 500
 }
 
-###
+### Rota para vender uma bicicleta
 PUT  http://localhost:3000/bicycles/sell/
 Content-Type: application/json
 
 { 
   "id":"2ec8b030-2cf0-41e3-b5d2-733d862a66e8"
 }
+
