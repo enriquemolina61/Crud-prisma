@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { BicycleService } from "../services/bicycleServices";
-import { prisma } from "../database/prismaclient";
 
 export class BicycleController {
   async createBicycle(request: Request, response: Response) {

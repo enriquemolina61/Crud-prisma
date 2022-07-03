@@ -1,6 +1,4 @@
 import { prisma } from "../database/prismaclient";
-import { Request, response, Response } from "express";
-import { PrismaClientUnknownRequestError } from "@prisma/client/runtime";
 
 interface ICreateBicycle {
   color: string;
