@@ -47,8 +47,7 @@ export class BicycleService {
     });
     if (bicycle.length === 0) {
       return {
-        message:
-          "Não existe nenhuma bicicleta com essa cor.",
+        message: "Não existe nenhuma bicicleta com essa cor.",
       };
     }
 
