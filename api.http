@@ -3,8 +3,8 @@ POST http://localhost:3000/bicycle
 Content-Type: application/json
 
 {
-  "color":"dd",
-  "gears": 10,
+  "color":"sdf",
+  "gears": 55,
   "brand": "ddf",
   "model":"da",
   "price": 500
@@ -14,10 +14,10 @@ Content-Type: application/json
 GET http://localhost:3000/bicycles
 
 ### Rota para filtrar por cor
-GET http://localhost:3000/bicycles/color/dd
+GET http://localhost:3000/bicycles/color/ddfdfg
 
 ### Rota para filtrar as bicicletas até o preço desejado  
-GET http://localhost:3000/bicycles/price/550
+GET http://localhost:3000/bicycles/price/55
 
 ### Rota para alterar o preço de uma bicicleta
 PUT  http://localhost:3000/bicycles/update/

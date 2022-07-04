@@ -30,6 +30,12 @@ export class BicycleService {
         sold: false,
       },
     });
+    if (bicycles.length === 0) {
+      return {
+        message:
+          "Não existe nenhuma bicicleta cadastrada até o momento, favor cadastrar as bicicletas.",
+      };
+    }
     return bicycles;
   }
 
@@ -39,6 +45,12 @@ export class BicycleService {
         color: color,
       },
     });
+    if (bicycle.length === 0) {
+      return {
+        message:
+          "Não existe nenhuma bicicleta com essa cor.",
+      };
+    }
 
     return bicycle;
   }
@@ -53,9 +65,10 @@ export class BicycleService {
         },
       },
     });
-    if (bicycle === []) {
+    if (bicycle.length === 0) {
       return {
-        message: "Não é possivel alterar o preço de uma bicicleta vendida!",
+        message:
+          "Não existe nenhuma bicicleta até esse preço, favor aumentar o valor do filtro.",
       };
     }
     return bicycle;
