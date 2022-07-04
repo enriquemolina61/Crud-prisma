@@ -43,7 +43,7 @@ export class BicycleController {
   }
   async findByPrice(request: Request, response: Response) {
     try {
-      const price = +request.params.price;
+      const price = request.body.price;
       const result = new BicycleService();
       const bicycle = await result.findByPrice(price);
 

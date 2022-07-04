@@ -54,6 +54,11 @@ export class BicycleService {
     return bicycle;
   }
   async findByPrice(price: number) {
+    if (typeof price !== "number") {
+      return {
+        message: "Por favor, coloque um preço válido.",
+      };
+    }
     const bicycle = await prisma.bicycle.findMany({
       where: {
         price: {
@@ -64,12 +69,14 @@ export class BicycleService {
         },
       },
     });
+
     if (bicycle.length === 0) {
       return {
         message:
           "Não existe nenhuma bicicleta até esse preço, favor aumentar o valor do filtro.",
       };
     }
+
     return bicycle;
   }
   async updatedPrice(id: string, price: number) {
