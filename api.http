@@ -30,7 +30,7 @@ Content-Type: application/json
 
 { 
   "id":"499ea9a4-a39f-43e1-839a-1849c9af8837",
-  "price": 500
+  "price": "asdasd"
 }
 
 ### Rota para vender uma bicicleta

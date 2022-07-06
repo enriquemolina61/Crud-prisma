@@ -80,6 +80,11 @@ export class BicycleService {
     return bicycle;
   }
   async updatedPrice(id: string, price: number) {
+    if (typeof price !== "number") {
+      return {
+        message: "Por favor, coloque um preço válido.",
+      };
+    }
     const bicycle = await prisma.bicycle.update({
       where: {
         id: id,
@@ -88,6 +93,7 @@ export class BicycleService {
         price: price,
       },
     });
+
     if (bicycle.sold == true) {
       return {
         message: "Não é possivel alterar o preço de uma bicicleta vendida!",
