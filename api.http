@@ -3,11 +3,11 @@ POST http://localhost:3000/bicycle
 Content-Type: application/json
 
 {
-  "color":"555",
-  "gears": 55,
-  "brand": "ddf",
-  "model":"da",
-  "price": 500
+  "color":"Blue",
+  "gears": 20,
+  "brand": "Caloi",
+  "model":"Trial",
+  "price": 1500
 }
 
 ###  Rota para listar todas as bicicletas que ainda nao foram vendidas
