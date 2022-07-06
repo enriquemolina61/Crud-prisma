@@ -14,7 +14,7 @@ Content-Type: application/json
 GET http://localhost:3000/bicycles
 
 ### Rota para filtrar por cor
-GET http://localhost:3000/bicycles/color/556
+GET http://localhost:3000/bicycles/color/blue
 
 ### Rota para filtrar as bicicletas até o preço desejado  
 PUT http://localhost:3000/bicycles/price
