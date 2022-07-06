@@ -96,7 +96,17 @@ export class BicycleService {
     return bicycle;
   }
   async sellBicycle(id: string) {
-    const bicycle = await prisma.bicycle.update({
+    let bicycle = await prisma.bicycle.findUnique({
+      where: {
+        id: id,
+      },
+    });
+    if (bicycle?.sold == true) {
+      return {
+        message: "Bicicleta já vendida!",
+      };
+    }
+    bicycle = await prisma.bicycle.update({
       where: {
         id: id,
       },

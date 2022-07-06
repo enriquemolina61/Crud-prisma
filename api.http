@@ -21,7 +21,7 @@ PUT http://localhost:3000/bicycles/price
 Content-Type: application/json
 
 { 
-  "price": 600
+  "price": 1000
 }
 
 ### Rota para alterar o preço de uma bicicleta
@@ -38,7 +38,7 @@ PUT  http://localhost:3000/bicycles/sell/
 Content-Type: application/json
 
 { 
-  "id":"2ec8b030-2cf0-41e3-b5d2-733d862a66e8"
+  "id":"c01bf8ba-1db0-4ac1-a79e-d581853ed3a9"
 }
 
 ### Rota para listar todas as bicicletas vendidas
