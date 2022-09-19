@@ -29,8 +29,8 @@ PUT  http://localhost:3000/bicycles/update/
 Content-Type: application/json
 
 { 
-  "id":"3ca56070-efec-4986-827a-a58a52b2825a",
-  "price": 3000
+  "id":"033f9a47-a8c0-4a85-8444-80d70fb9637f",
+  "price": 30000
 }
 
 ### Rota para vender uma bicicleta
@@ -38,7 +38,7 @@ PUT  http://localhost:3000/bicycles/sell/
 Content-Type: application/json
 
 { 
-  "id":"3ca56070-efec-4986-827a-a58a52b2825a"
+  "id":"c111fe8a-356e-41d4-957d-2fef36f12ae4"
 }
 
 ### Rota para listar todas as bicicletas vendidas
