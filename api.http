@@ -43,3 +43,7 @@ Content-Type: application/json
 
 ### Rota para listar todas as bicicletas vendidas
 GET http://localhost:3000/bicycles/sold/
+
+###
+
+GET https://apibikee.herokuapp.com/bicycles
