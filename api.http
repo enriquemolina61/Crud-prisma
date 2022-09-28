@@ -38,7 +38,7 @@ PUT  http://localhost:3000/bicycles/sell/
 Content-Type: application/json
 
 { 
-  "id":"c111fe8a-356e-41d4-957d-2fef36f12ae4"
+  "id":"9d7c722d-1902-48bd-a05e-5666db52803d"
 }
 
 ### Rota para listar todas as bicicletas vendidas
