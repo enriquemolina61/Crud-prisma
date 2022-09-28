@@ -1,5 +1,5 @@
 ### Rota para cadastrar a bicicleta
-POST http://localhost:3000/bicycle
+POST https://apibikee.herokuapp.com/bicycle
 Content-Type: application/json
 
 {
