@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "DATABASE_URL"
+  url      = env("DATABASE_URL")
 }
 
 model Bicycle {
@@ -16,7 +16,7 @@ model Bicycle {
   price      Float
   created_at DateTime @default(now())
   uptated_at DateTime @default(now())
-  sold       Boolean @default(false)
+  sold       Boolean  @default(false)
 
   @@map("bicycle")
 }
