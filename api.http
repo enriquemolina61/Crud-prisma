@@ -1,11 +1,11 @@
 ### Rota para cadastrar a bicicleta
-POST https://apibikee.herokuapp.com/bicycle
+POST https://apibikee.herokuapp.com/bicycles/create
 Content-Type: application/json
 
 {
   "color":"Blue",
   "gears": 20,
-  "brand": "Caloi",
+  "brand": "https://github.com/enriquemolina61/client/blob/master/src/assets/images/kisspng-racing-bicycle-shimano-mountain-bike-ultegra-haibike-2-18-aff-5b6d2d634eff44.4947011715338816993236.png?raw=true",
   "model":"Trial",
   "price": 1500
 }
